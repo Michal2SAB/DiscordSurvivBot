@@ -20,6 +20,7 @@ class Player(commands.Cog):
   async def stats(self, ctx):
     args = ctx.message.content.split()
     arg_count = len(args) - 1
+    prefix = '$'
     msg = f"**Argument #1**: Player Name \n**Example**: `{prefix}player obsidian_mb`\n**NOTE**: You must put in the **user's account name** which might differ with their in game name."
     if arg_count != self.args:
      await ctx.send(f'**{self.name}** command only takes an argument count of **{self.args}**\n{msg}')
