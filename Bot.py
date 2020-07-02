@@ -12,8 +12,8 @@ client = commands.Bot(command_prefix=bot_prefix)
 
 @client.event
 async def on_ready():
-  activity = discord.Game(name="Mind Yo Business.")
-  await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='Mind Yo Business.'))
+  activity = discord.Game(name="?")
+  await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='?.'))
   print("Name: {}".format(client.user.name))
   print("ID: {}".format(client.user.id))
   print('Servers connected to:')
