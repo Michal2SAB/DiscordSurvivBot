@@ -9,7 +9,7 @@ class Update(commands.Cog):
     self.name = 'Update'
     self.args = 0
     self.url = 'http://surviv.io/'
-    self.msg = '**Example**: `s!update`'
+    self.msg = '**Example**: `s$update`'
   
   @commands.Cog.listener()
   async def on_ready(self):
@@ -37,13 +37,13 @@ class Update(commands.Cog):
       tags3 = []
       for i in tags:
         tags3.append(i.text)
-      if len(tags3[0]) > 30:
-        description = tags3[0]
-        title = f'⏫({tags2})⏫'
-      else:
-        title = f'⏫ "{tags3[0]}" ({tags2}) ⏫'
-        del tags3[0]
-        description = ' \n \n '.join(tags3) 
+     #if len(tags3[0]) > 30:
+      #description = tags3[0]
+      #title = f'⏫({tags2})⏫'
+      #else:
+      title = f'⏫ "{tags3[0]}" ({tags2}) ⏫'
+      del tags3[0]
+      description = ' \n \n '.join(tags3) 
       desc = f'{description}'
       print(desc)
       embed = discord.Embed(title=title, description=desc, color=0x00b037)
