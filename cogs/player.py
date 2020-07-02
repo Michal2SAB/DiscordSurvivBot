@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import aiohttp
 from bs4 import BeautifulSoup as soupify
-import aiosqlite
 
 class Player(commands.Cog):
   def __init__(self, bot):
