@@ -12,8 +12,8 @@ client = commands.Bot(command_prefix=prefix)
 
 @client.event
 async def on_ready():
-  activity = discord.Game(name="?")
-  await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='?.'))
+  activity = discord.Game(name="Surviv.io")
+  await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='Surviv.io'))
   print("Name: {}".format(client.user.name))
   print("ID: {}".format(client.user.id))
   print('Servers connected to:')
