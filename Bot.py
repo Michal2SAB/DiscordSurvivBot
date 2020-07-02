@@ -25,7 +25,7 @@ exceptioN = []
 for file in os.listdir('./cogs'):
     if file.endswith('.py'):
       if file not in exceptioN:
-        bot.load_extension(f'cogs.{file[:-3]}')
+        client.load_extension(f'cogs.{file[:-3]}')
 
     
-bot.run(os.environ['bot_token'])
+client.run(os.environ['bot_token'])
