@@ -41,7 +41,7 @@ class Update(commands.Cog):
       #description = tags3[0]
       #title = f'⏫({tags2})⏫'
       #else:
-      title = f'⏫ "{tags3[0]}" ({tags2}) ⏫'
+      title = f'{tags3[0]} ({tags2})'
       del tags3[0]
       description = ' \n \n '.join(tags3) 
       desc = f'{description}'
