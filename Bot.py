@@ -7,8 +7,8 @@ from bs4 import BeautifulSoup as soupify
 import os
 
 Client = discord.Client()
-bot_prefix= "$"
-client = commands.Bot(command_prefix=bot_prefix)
+prefix= "$"
+client = commands.Bot(command_prefix=prefix)
 
 @client.event
 async def on_ready():
