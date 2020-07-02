@@ -4,7 +4,6 @@ from discord.ext import commands
 from discord.ext import *
 import aiohttp
 from bs4 import BeautifulSoup as soupify
-import aiosqlite
 import os
 
 Client = discord.Client()
