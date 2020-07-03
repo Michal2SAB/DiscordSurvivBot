@@ -34,9 +34,9 @@ class Gun(commands.Cog):
             ctx.send('Bad Web Request to the surviv.io API.')
           unparsed =  await r.read()
       try:
-        imAge = soupify(unparsed, 'html.parser').find_all('table', {'class': 'article-table'})[1].find_all('img')
-        print(imAge)
         b = soupify(unparsed, 'html.parser').find_all('table', {'class': 'article-table'})[1].find_all('tr')
+        imAge = b.find_all('img')
+        print(imAge)
       except:
         await ctx.send("Looks like the bot couldn't find what you were looking for.")
       for i in range(len(b)):
