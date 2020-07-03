@@ -47,7 +47,7 @@ class Gun(commands.Cog):
             guns[i.text] = i['href']
       for i in imAge:
         if i != None:
-            imAges[i.text] = i['src']
+            imAges[i.text] = i['data-src']
       print(str(imAges))
       gun_dict = guns.copy()
       for b in guns:
