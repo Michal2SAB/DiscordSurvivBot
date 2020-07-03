@@ -38,9 +38,9 @@ class Gun(commands.Cog):
       except:
         await ctx.send("Looks like the bot couldn't find what you were looking for.")
       for i in range(len(b)):
-        b[i] = b[i].find('a')
         imAge = b[i].find('img')
         print(imAge)
+        b[i] = b[i].find('a')
       guns = {}
       for i in b:
         if i != None:
