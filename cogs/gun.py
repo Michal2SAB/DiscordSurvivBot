@@ -39,12 +39,16 @@ class Gun(commands.Cog):
         await ctx.send("Looks like the bot couldn't find what you were looking for.")
       for i in range(len(b)):
         imAge = b[i].find('img')
-        print(imAge)
         b[i] = b[i].find('a')
       guns = {}
+      imAges = {}
       for i in b:
         if i != None:
             guns[i.text] = i['href']
+      for i in imAge:
+        if i != None:
+            imAges[i.text] = i['src']
+      print(str(imAges))
       gun_dict = guns.copy()
       for b in guns:
         if b == 'M9':
