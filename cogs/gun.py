@@ -35,7 +35,6 @@ class Gun(commands.Cog):
           unparsed =  await r.read()
       try:
         b = soupify(unparsed, 'html.parser').find_all('table', {'class': 'article-table'})[1].find_all('tr')
-        print(b)
       except:
         await ctx.send("Looks like the bot couldn't find what you were looking for.")
       for i in range(len(b)):
@@ -52,7 +51,6 @@ class Gun(commands.Cog):
           del gun_dict[b]
       for i in gun_dict.keys():
         if gun_name.lower() == i.lower():
-          print(gun_name, i)
           act_gun = i
           self.in_guns = True
       if not self.in_guns:
