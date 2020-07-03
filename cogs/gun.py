@@ -69,8 +69,8 @@ class Gun(commands.Cog):
           async with session.get('https://survivio.fandom.com/wiki/' + act_gun) as r:
             content = await r.read()
         html = soupify(content, 'html.parser')
-        gun_pic = html.find('figure', {'class': 'article-thumb tright '}).text
-        print(gun_pic)
+        gun_pic = html.find('figure', {'class': 'article-thumb tright '})
+        print(str(gun_pic))
         fire_delay = html.find('div', {'data-source': 'fireDelay'}).text
         rel_time = html.find('div', {'data-source': 'reloadTime'}).text
         spread = html.find('div', {'data-source': 'shotSpread'}).text
